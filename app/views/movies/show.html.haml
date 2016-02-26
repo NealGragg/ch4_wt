@@ -11,5 +11,10 @@
 %h3 Description:
  
 %p#description= @movie.description
+
+%h1= @movie.title
+-# will give "undefined method 'title' for nil:NilClass" if @movie is nil
  
 = link_to 'Back to movie list', movies_path
+
+= @movie.inspect
