@@ -14,6 +14,10 @@
 
 %h1= @movie.title
 -# will give "undefined method 'title' for  nil:NilClass" if @movie is nil
+
+= link_to 'Edit info', edit_movie_path(@movie)
+
+= link_to 'Delete', movie_path(@movie), :method => :delete
  
 = link_to 'Back to movie list', movies_path
 
